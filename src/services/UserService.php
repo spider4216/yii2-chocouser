@@ -64,7 +64,7 @@ class UserService extends Component
     
     public function detailById(int $id) : array
     {
-        return SubjectModel::find()
+        $user = SubjectModel::find()
         ->select(
             'users.*, ud.name as first_name, ud.surname, ud.gender, ' .
             't.name as city_name, t.translit_name as city_translit_name'
@@ -74,6 +74,12 @@ class UserService extends Component
         ->where(['users.id' => $id])
         ->asArray()
         ->one();
+            
+        if ($user === null) {
+            throw new UserDataException(\Yii::t('app', 'user not found'));
+        }
+        
+        return $user;
     }
     
     public function usersCount()
