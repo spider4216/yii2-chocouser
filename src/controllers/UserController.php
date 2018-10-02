@@ -25,7 +25,7 @@ class UserController extends Controller
         $request = \Yii::$app->request;
         
         \Yii::$app->getModule('chocouser')->town->oneById(
-            $request->post('town_id')
+            (int) $request->post('town_id')
         );
         
         $dto = new CreateUserDto();
@@ -34,8 +34,8 @@ class UserController extends Controller
         ->setPhone($request->post('phone'))
         ->setName($request->post('name'))
         ->setSurname($request->post('surname'))
-        ->setGender($request->post('gender'))
-        ->setTownId($request->post('town_id'));
+        ->setGender((int) $request->post('gender'))
+        ->setTownId((int) $request->post('town_id'));
         
         $user = \Yii::$app->getModule('chocouser')->subject->create($dto);
         

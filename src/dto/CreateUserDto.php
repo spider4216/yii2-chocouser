@@ -71,7 +71,7 @@ class CreateUserDto
     }
 
     /**
-     * @return number
+     * @return int
      */
     public function getGender() : ?int
     {
@@ -79,7 +79,7 @@ class CreateUserDto
     }
 
     /**
-     * @return number
+     * @return int
      */
     public function getTownId()  : ?int
     {
@@ -131,7 +131,7 @@ class CreateUserDto
     }
 
     /**
-     * @param number $gender
+     * @param int $gender
      * @return CreateUserDto
      */
     public function setGender(?string $gender) : self
@@ -142,10 +142,10 @@ class CreateUserDto
     }
 
     /**
-     * @param number $town_id
+     * @param int $town_id
      * @return CreateUserDto
      */
-    public function setTownId(?string $town_id) : self
+    public function setTownId(?int $town_id) : self
     {
         $this->town_id = $town_id;
         

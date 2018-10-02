@@ -19,6 +19,8 @@ class UserDataModel extends ActiveRecord
     {
         return [
             [['user_id', 'name', 'surname', 'gender', 'town_id'], 'required'],
+
+            [['name', 'surname',], 'string', 'length' => [3, 24]],
             
             ['user_id', 'integer'],
 
