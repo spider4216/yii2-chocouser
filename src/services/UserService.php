@@ -88,5 +88,13 @@ class UserService extends Component
         
         return count($collection);
     }
+    
+    public function userList() : array
+    {
+        return SubjectModel::find()->select([
+            'id',
+            'phone'
+        ])->asArray()->all();
+    }
 }
 

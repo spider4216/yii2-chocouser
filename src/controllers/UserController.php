@@ -37,10 +37,7 @@ class UserController extends Controller
     
     public function actionUserList()
     {
-        return SubjectModel::find()->select([
-            'id',
-            'phone'
-        ])->asArray()->all();
+        return \Yii::$app->getModule('chocouser')->subject->userList();
     }
     
     public function actionUserDetail()
