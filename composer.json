@@ -1,0 +1,13 @@
+{
+    "name": "yii2-chocofamily/yii2-chocouser",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+        	"yii2chocofamily/yii2chocouser": "src/"
+        }
+    },
+    "require": {
+        "php" : "^7.2"
+    }
+}
