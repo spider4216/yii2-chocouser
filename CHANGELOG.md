@@ -57,3 +57,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - add README description
+
+## [v0.1.11] - 2018-10-02
+
+### Changed
+- fix README
+- change CHANGELOG

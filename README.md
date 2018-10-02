@@ -42,7 +42,7 @@ composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 "repositories": [
 	...
 	{
-    	"type": "vcs",
+		"type": "vcs",
 		"url": "https://github.com/spider4216/yii2-chocouser.git"
 	}
 	...
@@ -56,7 +56,7 @@ composer create-project --prefer-dist yiisoft/yii2-app-basic basic
 composer update
 ```
 
-Отредактируйте конфигурационный файл, директивы которого отвечают за соединение с БД
+Отредактируйте конфигурационный файл, директивы которого отвечают за соединение с БД (“config/db.php”)
 
 ```
 return [
@@ -75,7 +75,7 @@ return [
 php yii migrate/up --migrationPath=@vendor/yii2-chocofamily/yii2-chocouser/src/migrations
 
 ```
-Внесите в главный конфиг приложения стартовые настройки роутинга и выдачи результата:
+Внесите в главный конфиг приложения стартовые настройки роутинга и выдачи результата (“config/web.php”):
 
 ```
 ‘components’ => [
