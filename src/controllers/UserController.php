@@ -14,9 +14,9 @@ class UserController extends Controller
     {
         $request = \Yii::$app->request;
         
-        if (TownsModel::findOne($request->post('town_id')) === null) {
-            throw new NotFoundHttpException('Town not found');
-        }
+        \Yii::$app->getModule('chocouser')->town->oneById(
+            $request->post('town_id')
+        );
         
         $dto = new CreateUserDto();
         

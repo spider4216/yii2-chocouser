@@ -74,7 +74,7 @@ class UserService extends Component
         ->where(['users.id' => $id])
         ->asArray()
         ->one();
-            
+
         if ($user === null) {
             throw new UserDataException(\Yii::t('app', 'user not found'));
         }
