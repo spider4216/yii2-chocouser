@@ -52,3 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - add CHANGELOG
+
+## [v0.1.10] - 2018-10-02
+
+### Changed
+- add README description
