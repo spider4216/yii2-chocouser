@@ -1,15 +1,25 @@
 <?php
 namespace yii2chocofamily\yii2chocouser\controllers;
 
-use yii\web\NotFoundHttpException;
 use yii\base\Controller;
 use yii2chocofamily\yii2chocouser\dto\CreateUserDto;
-use yii2chocofamily\yii2chocouser\models\SubjectModel;
-use yii2chocofamily\yii2chocouser\models\TownsModel;
 use yii2chocofamily\yii2chocouser\enums\RestStatusEnum;
 
+/**
+ * User Controller
+ * 
+ * @author farza
+ */
 class UserController extends Controller
 {
+    /**
+     * Create User
+     * 
+     * Notice!
+     * can't use strict return type because filters
+     * 
+     * @return array
+     */
     public function actionCreate()
     {
         $request = \Yii::$app->request;
@@ -35,11 +45,27 @@ class UserController extends Controller
         ];
     }
     
+    /**
+     * Get User List
+     * 
+     * Notice!
+     * can't use strict return type because filters
+     * 
+     * @return array
+     */
     public function actionUserList()
     {
         return \Yii::$app->getModule('chocouser')->subject->userList();
     }
     
+    /**
+     * Get User Detail by User ID
+     * 
+     * Notice!
+     * can't use strict return type because filters
+     * 
+     * @return array
+     */
     public function actionUserDetail()
     {
         $id = \Yii::$app->request->get('id');
@@ -47,6 +73,14 @@ class UserController extends Controller
         return \Yii::$app->getModule('chocouser')->subject->detailById($id);
     }
     
+    /**
+     * Get count of user
+     * 
+     * Notice!
+     * can't use strict return type because filters
+     * 
+     * @return array
+     */
     public function actionUserCount()
     {
         $count = \Yii::$app->getModule('chocouser')->subject->usersCount();

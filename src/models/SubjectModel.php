@@ -4,6 +4,11 @@ namespace yii2chocofamily\yii2chocouser\models;
 use yii\db\ActiveRecord;
 use yii2chocofamily\yii2chocouser\enums\UserStatusEnum;
 
+/**
+ * User Model
+ * 
+ * @author farza
+ */
 class SubjectModel extends ActiveRecord
 {
     public static function tableName()

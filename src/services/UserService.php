@@ -8,8 +8,21 @@ use yii2chocofamily\yii2chocouser\exceptions\SubjectException;
 use yii2chocofamily\yii2chocouser\exceptions\UserDataException;
 use yii2chocofamily\yii2chocouser\dto\CreateUserDto;
 
+/**
+ * Business and Infrastructure logic for users
+ * 
+ * @author farza
+ */
 class UserService extends Component
 {
+    /**
+     * Create user and user's profile
+     * 
+     * @param CreateUserDto $dto
+     * @throws SubjectException
+     * @throws UserDataException
+     * @return SubjectModel
+     */
     public function create(CreateUserDto $dto) : SubjectModel
     {
         $transaction = \Yii::$app->db->beginTransaction();
@@ -62,6 +75,13 @@ class UserService extends Component
         return $user;
     }
     
+    /**
+     * User detail
+     * 
+     * @param int $id
+     * @throws UserDataException
+     * @return array
+     */
     public function detailById(int $id) : array
     {
         $user = SubjectModel::find()
@@ -82,13 +102,23 @@ class UserService extends Component
         return $user;
     }
     
-    public function usersCount()
+    /**
+     * Count of users
+     * 
+     * @return int
+     */
+    public function usersCount() : int
     {
         $collection = SubjectModel::find()->all();
         
         return count($collection);
     }
     
+    /**
+     * User List
+     * 
+     * @return array
+     */
     public function userList() : array
     {
         return SubjectModel::find()->select([

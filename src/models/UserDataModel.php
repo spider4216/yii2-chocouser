@@ -3,6 +3,11 @@ namespace yii2chocofamily\yii2chocouser\models;
 
 use yii\db\ActiveRecord;
 
+/**
+ * User's profile model
+ * 
+ * @author farza
+ */
 class UserDataModel extends ActiveRecord
 {
     public static function tableName()

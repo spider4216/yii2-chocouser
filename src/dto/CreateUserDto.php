@@ -1,6 +1,11 @@
 <?php
 namespace yii2chocofamily\yii2chocouser\dto;
 
+/**
+ * DTO for create user
+ * 
+ * @author farza
+ */
 class CreateUserDto
 {
     /**
