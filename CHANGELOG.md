@@ -63,3 +63,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - fix README
 - change CHANGELOG
+
+## [v0.1.12] - 2018-10-02
+
+### Changed
+- fix README
