@@ -24,6 +24,8 @@ class SubjectModel extends ActiveRecord
             [['email', 'phone',], 'unique'],
             
             ['email', 'email'],
+
+            ['phone', 'number'],
             
             [['email', 'phone'], 'string', 'max' => 255],
             
